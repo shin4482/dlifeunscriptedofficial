@@ -16,6 +16,8 @@
             background: black;
             color: white;
             text-align: center;
+            margin: 0;
+            font-family: Georgia, serif;
         }
 
 
@@ -33,10 +35,58 @@
         }
 
 
+        h3 {
+            color: white;
+            margin-top: 45px;
+        }
+
+
         p {
             color: #999999;
             font-size: 18px;
             line-height: 1.7;
+        }
+
+
+        nav {
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #222222;
+        }
+
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 18px;
+            letter-spacing: 3px;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+
+        nav a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+
+
+        nav a:hover {
+            color: white;
+        }
+
+
+        section {
+            padding: 100px 20px;
+            border-bottom: 1px solid #222222;
         }
 
 
@@ -48,62 +98,100 @@
         }
 
 
-nav {
-    padding: 25px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #222222;
-}
-
-
-nav a {
-    color: #cccccc;
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 2px;
-    transition: color 0.3s ease;
-}
-
-
-        nav a:hover {
-            color: white;
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
         }
-        .logo {
-    font-family: Georgia, serif;
-    font-size: 18px;
-    letter-spacing: 3px;
-}
-        .nav-links {
-    display: flex;
-    gap: 25px;
-}
 
 
-        section {
-            padding: 100px 20px;
-            border-bottom: 1px solid #222222;
+        .share-story-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+
+        .story-list {
+            max-width: 700px;
+            margin: 30px auto;
+            text-align: left;
+            color: #999999;
+            font-size: 18px;
+            line-height: 1.9;
+        }
+
+
+        .story-list li {
+            margin-bottom: 8px;
+        }
+
+
+        .privacy-list {
+            max-width: 700px;
+            margin: 30px auto;
+            text-align: left;
+            color: #999999;
+            font-size: 18px;
+            line-height: 1.9;
+        }
+
+
+        .guidelines-list {
+            max-width: 700px;
+            margin: 30px auto;
+            text-align: left;
+            color: #999999;
+            font-size: 18px;
+            line-height: 1.9;
+        }
+
+
+        .process-list {
+            max-width: 700px;
+            margin: 30px auto;
+            text-align: left;
+            color: #999999;
+            font-size: 18px;
+            line-height: 1.9;
         }
 
 
         @media (max-width: 600px) {
 
-    h1 {
-        font-size: 36px;
-    }
+            h1 {
+                font-size: 36px;
+                letter-spacing: 3px;
+            }
 
-    nav {
-        flex-direction: column;
-        gap: 20px;
-    }
 
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
+            nav {
+                flex-direction: column;
+                gap: 20px;
+                padding: 25px 20px;
+            }
 
-}
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+
+            section {
+                padding: 70px 20px;
+            }
+
+
+            .intro {
+                margin: 50px auto;
+                padding: 25px;
+            }
+
+
+            p {
+                font-size: 16px;
+            }
+
         }
 
     </style>
@@ -114,30 +202,36 @@ nav a {
 <body>
 
 
-<nav>
+    <!-- NAVIGATION -->
 
-    <div class="logo">
-        D’LIFE UNSCRIPTED
-    </div>
+    <nav>
 
-    <div class="nav-links">
+        <div class="logo">
+            D’LIFE UNSCRIPTED
+        </div>
 
-        <a href="#home">HOME</a>
 
-        <a href="#about">ABOUT</a>
+        <div class="nav-links">
 
-        <a href="#episodes">EPISODES</a>
+            <a href="#home">HOME</a>
 
-        <a href="#SHARE YOUR STORY">sHARE YOUR STORY</a>
+            <a href="#about">ABOUT</a>
 
-    </div>
+            <a href="#episodes">EPISODES</a>
 
-</nav>
+            <a href="#share-story">SHARE YOUR STORY</a>
 
+        </div>
+
+    </nav>
+
+
+    <!-- HOME -->
 
     <section id="home">
 
         <h1>WELCOME TO D’LIFE UNSCRIPTED</h1>
+
 
         <p>
             ...where we talk about
@@ -147,67 +241,88 @@ nav a {
 
         <div class="intro">
 
-            <h2>Real stories. Real thoughts. Real conversations.</h2>
+            <h2>
+                Real stories. Real thoughts. Real conversations.
+            </h2>
 
-            <h2>Because real life has no script.</h2>
+            <h2>
+                Because real life has no script.
+            </h2>
 
         </div>
 
-<section id="about">
-
-    <div class="about-content">
-
-        <h2>ABOUT D’LIFE UNSCRIPTED</h2>
-
-        <h3>Our Story</h3>
-
-        <p>
-            D’LIFE UNSCRIPTED was created to provide a welcoming
-            space for authentic conversations and shared experiences.
-            We believe that behind every person is a story worth telling.
-            Whether it's about love, family, friendship, career,
-            personal growth, mental wellness, or everyday life,
-            every conversation has the power to inspire and connect.
-            Our goal is to build a community where people feel heard,
-            respected, and understood.
-        </p>
+    </section>
 
 
-        <h3>Our Mission</h3>
+    <!-- ABOUT -->
 
-        <p>
-            To create a safe and welcoming community where people
-            can share real stories, exchange honest thoughts,
-            and build meaningful connections through conversation.
-        </p>
+    <section id="about">
+
+        <div class="about-content">
+
+            <h2>ABOUT D’LIFE UNSCRIPTED</h2>
 
 
-        <h3>Our Vision</h3>
+            <h3>Our Story</h3>
 
-        <p>
-            To become one of the most trusted online communities
-            for storytelling, personal growth, and meaningful conversations.
-        </p>
+            <p>
+                D’LIFE UNSCRIPTED was created to provide a welcoming
+                space for authentic conversations and shared experiences.
+                We believe that behind every person is a story worth telling.
+                Whether it's about love, family, friendship, career,
+                personal growth, mental wellness, or everyday life,
+                every conversation has the power to inspire and connect.
+                Our goal is to build a community where people feel heard,
+                respected, and understood.
+            </p>
 
-        <h3>Our Values</h3>
 
-        <p>
-Authenticity
-Respect
-Empathy
-Kindness
-Connection
-Growth
-        </p>
+            <h3>Our Mission</h3>
 
-    </div>
+            <p>
+                To create a safe and welcoming community where people
+                can share real stories, exchange honest thoughts,
+                and build meaningful connections through conversation.
+            </p>
 
-</section>
 
+            <h3>Our Vision</h3>
+
+            <p>
+                To become one of the most trusted online communities
+                for storytelling, personal growth, and meaningful conversations.
+            </p>
+
+
+            <h3>Our Values</h3>
+
+            <ul class="story-list">
+
+                <li>Authenticity</li>
+
+                <li>Respect</li>
+
+                <li>Empathy</li>
+
+                <li>Kindness</li>
+
+                <li>Connection</li>
+
+                <li>Growth</li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- EPISODES -->
 
     <section id="episodes">
 
         <h2>EPISODES</h2>
+
 
         <p>
             Explore conversations, stories, and topics
@@ -215,114 +330,190 @@ Growth
         </p>
 
     </section>
-        
-    <section id="sHARE YOUR STORY">
 
-        <div class="sHARE YOUR STORY-content">
 
-             <h2>SHARE YOUR STORY</h2>
-        
-                <H3>Every Story Matters</H3>
+    <!-- SHARE YOUR STORY -->
 
-        <p>
-Every person has a story worth telling.
-             <p>
+    <section id="share-story">
 
-                  <p>
-Whether it's a life lesson, a relationship, a personal struggle, a dream, a moment of joy, or a challenge you've overcome, your story has the power to inspire, comfort, and connect with others. <p>
+        <div class="share-story-content">
 
-                       <p>At D'LIFE UNSCRIPTED, we believe that meaningful conversations begin with real experiences.  <p>
-                            <p>By sharing your story, you may help someone feel understood, find hope, or realize they're not alone.
-Because real life has no script. <p>
-        </p>
+            <h2>SHARE YOUR STORY</h2>
 
-                <H3>💛 What Can You Share?</H3>
-         <p>
-You're welcome to share stories or topics about:
-              <p>
-                 <p>  
-🌱 Personal Growth
-❤️ Love & Relationships
-👨‍👩‍👧 Family & Parenting
-🤝 Friendship
-💼 Career & Work Life
-🎓 School & Student Life
-💰 Money & Financial Lessons
-🧠 Mental Wellness & Self-Care
-🌍 Everyday Life Experiences
-✨ Life Lessons & Reflections
-💭 Anonymous Confessions
-❓ Questions or Advice You'd Like the Community to Discuss
-                   <p>
-                        <p>
-No story is too small. Sometimes, the smallest moments create the biggest impact.
-        </p>
-            <H3>🔒 Your Privacy Matters</H3>
 
-        </p>
-Your comfort and privacy are important to us.
-        </p>
-        </p> 
-When submitting your story, you can choose to:
-             </p>
-            </p>
-✅ Share your name
-            </p>
-            </p>
-✅ Use a nickname
-            </p>
-            </p>
-✅ Remain completely anonymous
-            </p>
-            </p>
-If your story is featured in a D'LIFE UNSCRIPTED episode or discussion, we will respect the privacy option you choose.
-            </p>
-                        <H3>📋 Submission Guidelines
-</H3>
+            <h3>Every Story Matters</h3>
 
-        </p>
-To help us create a safe and welcoming community, please:
-        </p>
-        </p> 
-✅ Be honest and respectful.
-             </p>
-            </p>
-✅ Avoid sharing private information about yourself or others.
-            </p>
-            </p>
-✅ Do not include offensive, hateful, or illegal content.
-            </p>
-            </p>
-✅ Submit only stories that you have the right to share.
-            </p>
-                        </p>
-✅ Understand that not every submission may be featured.
-            </p>
-            </p>
-Our goal is to create conversations that inspire, encourage, and connect people.
-            </p>
-<H3>🎙️ What Happens Next?</H3>
 
-        </p>
-After you submit your story:
-        </p>
-        </p> 
-1. Our team reviews your submission.
-             </p>
-            </p>
-2. Selected stories may be featured in future D'Life Unscripted conversations, live streams, or podcast episodes.
-            </p>
-            </p>
-3. If your story is selected, we'll honor your chosen privacy preference (name, nickname, or anonymous).
-            </p>
-            </p>
-✅ Submit only stories that you have the right to share.
-            </p>
-            </p>
-Every submission is appreciated, whether or not it is featured.
+            <p>
+                Every person has a story worth telling.
             </p>
 
-          </div>
+
+            <p>
+                Whether it's a life lesson, a relationship, a personal
+                struggle, a dream, a moment of joy, or a challenge you've
+                overcome, your story has the power to inspire, comfort,
+                and connect with others.
+            </p>
+
+
+            <p>
+                At D'LIFE UNSCRIPTED, we believe that meaningful
+                conversations begin with real experiences.
+            </p>
+
+
+            <p>
+                By sharing your story, you may help someone feel understood,
+                find hope, or realize they're not alone.
+            </p>
+
+
+            <p>
+                Because real life has no script.
+            </p>
+
+
+            <h3>💛 What Can You Share?</h3>
+
+
+            <p>
+                You're welcome to share stories or topics about:
+            </p>
+
+
+            <ul class="story-list">
+
+                <li>🌱 Personal Growth</li>
+
+                <li>❤️ Love &amp; Relationships</li>
+
+                <li>👨‍👩‍👧 Family &amp; Parenting</li>
+
+                <li>🤝 Friendship</li>
+
+                <li>💼 Career &amp; Work Life</li>
+
+                <li>🎓 School &amp; Student Life</li>
+
+                <li>💰 Money &amp; Financial Lessons</li>
+
+                <li>🧠 Mental Wellness &amp; Self-Care</li>
+
+                <li>🌍 Everyday Life Experiences</li>
+
+                <li>✨ Life Lessons &amp; Reflections</li>
+
+                <li>💭 Anonymous Confessions</li>
+
+                <li>
+                    ❓ Questions or Advice You'd Like the Community to Discuss
+                </li>
+
+            </ul>
+
+
+            <p>
+                No story is too small. Sometimes, the smallest moments
+                create the biggest impact.
+            </p>
+
+
+            <h3>🔒 Your Privacy Matters</h3>
+
+
+            <p>
+                Your comfort and privacy are important to us.
+            </p>
+
+
+            <p>
+                When submitting your story, you can choose to:
+            </p>
+
+
+            <ul class="privacy-list">
+
+                <li>✅ Share your name</li>
+
+                <li>✅ Use a nickname</li>
+
+                <li>✅ Remain completely anonymous</li>
+
+            </ul>
+
+
+            <p>
+                If your story is featured in a D'LIFE UNSCRIPTED episode
+                or discussion, we will respect the privacy option you choose.
+            </p>
+
+
+            <h3>📋 Submission Guidelines</h3>
+
+
+            <p>
+                To help us create a safe and welcoming community, please:
+            </p>
+
+
+            <ul class="guidelines-list">
+
+                <li>✅ Be honest and respectful.</li>
+
+                <li>
+                    ✅ Avoid sharing private information about yourself or others.
+                </li>
+
+                <li>
+                    ✅ Do not include offensive, hateful, or illegal content.
+                </li>
+
+                <li>
+                    ✅ Submit only stories that you have the right to share.
+                </li>
+
+                <li>
+                    ✅ Understand that not every submission may be featured.
+                </li>
+
+            </ul>
+
+
+            <p>
+                Our goal is to create conversations that inspire,
+                encourage, and connect people.
+            </p>
+
+
+            <h3>What Happens After You Submit?</h3>
+
+
+            <ol class="process-list">
+
+                <li>
+                    Our team reviews your submission.
+                </li>
+
+                <li>
+                    Selected stories may be featured in future
+                    D'LIFE UNSCRIPTED conversations, live streams,
+                    or podcast episodes.
+                </li>
+
+                <li>
+                    If your story is selected, we'll honor your chosen
+                    privacy preference (name, nickname, or anonymous).
+                </li>
+
+            </ol>
+
+
+            <p>
+                Every submission is appreciated, whether or not it is featured.
+            </p>
+
+        </div>
 
     </section>
 
